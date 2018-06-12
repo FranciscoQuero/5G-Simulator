@@ -1,5 +1,5 @@
 \chapter{Introducción}\label{cap.introduccion}
-\pagenumbering{arabic} % para empezar la numeración con números
+%\pagenumbering{arabic} % para empezar la numeración con números
 \section{Contexto}
 Desde el surgimiento de la primera generación de comunicaciones móviles \ac{1g}, la impronta de estas comunicaciones se ve reflejada hasta en el más mínimo aspecto de la vida cotidiana y de la industria. Lejos ha quedado ya la tradicional y exclusiva utilidad de realizar llamadas de voz que tenían los terminales móviles en un principio.
 
@@ -70,7 +70,7 @@ Por ejemplo, una de las posibles mejoras que las redes heterogéneas ofrecen es 
 \begin{figure}[!hb]
 	\centering
     \includegraphics[width=0.75\linewidth]{imagenes/icic.png}
-	\caption{Escenario simple en el que se utitiliza una técnica de \acs{icic} para evitar interferencia en el enlace de bajada.}
+	\caption{Escenario simple en el que se utiliza una técnica de \acs{icic} para evitar interferencia en el enlace de bajada.}
 	\label{fig:icic}
 \end{figure}
 
@@ -85,7 +85,7 @@ Además, para un correcto desarrollo de los estándares venideros, como \acs{5g}
 
 Debido a tal problemática, en etapas de diseño, desarrollo, planificación y despliegue de redes y nuevas tecnologías inalámbricas, los simuladores toman un papel muy importante, puesto que permiten anticiparse a resultados con la finalidad de evitar futuros inconvenientes que un mal diseño pueda provocar, y su consecuente repercusión económica. Del mismo modo, los simuladores también permiten conocer los propios límites de una tecnología y su rendimiento. Algo que aunque solamente tenga un uso inmediato en los campos de investigación, a largo plazo permite evolucionar gracias a revisiones de dichas tecnologías y mejoras en siguientes versiones.
 
-Es por ello que la finalidad del presente Trabajo de Fin de Grado es la elaboración de un simulador de comunicaciones móviles de entornos heterogéneos, con enfoque en \acs{5g}.
+Es por ello que la finalidad del presente Trabajo de Fin de Grado es la elaboración de un simulador de comunicaciones móviles de entornos heterogéneos, con enfoque en \acs{5g}, llamado \textit{5Gneralife} -\textit{5G geNERAtor of LInk level simulations For Educational purposes}-.
 
 \section{Objetivos}
 
@@ -97,31 +97,31 @@ Seguidamente, es necesario hacer una planificación de las características que 
 
 El objetivo fundamental de estas etapas es el de extender el simulador de capa física \textit{QuaDRiGa} para obtener un simulador de nivel de enlace más completo con nuevas funcionalidades, incluyendo algunas características propias de simuladores de nivel de sistema, así como también una mayor flexibilidad para evaluar escenarios multi-celda y multi-frecuencia.
 
-Por último, en base al trabajo realizado y al software implementado, se realizarán las oportunas pruebas comprobando el rendimiento de distintos escenarios y ajustes de comunicaciones. También se diseñará un protocolo estándar de pruebas para realizar una comparación exhaustiva.
+Por último, en base al trabajo realizado y al software implementado, se realizarán las oportunas pruebas comprobando el rendimiento de distintos escenarios y ajustes de comunicaciones, así como una especificación de orientaciones de uso para que las simulaciones resulten realistas.
 
-\section{Organización del Proyecto}
+\section{Organización de la memoria}
 
-Sección en construcción. Aquí iría un resumen de los siguientes capítulos que será añadido tras la finalización de los mismos.
+A modo de antesala del contenido del proyecto, a continuación se detalla un listado de capítulos y un resumen de sus contenidos, con la finalidad de aclarar qué se puede esperar en el proyecto y su organización.
 
 \paragraph{Capítulo 1: Introducción} \mbox{} \\
-	Resumen de la introducción
+	Este capítulo está dedicado a introducir la motivación del proyecto, su importancia y sus objetivos, así como realizar una primera toma de contacto con las herramientas que se utilizarán. También se realiza una descripción de la organización de la memoria.
 
 \paragraph{Capítulo 2: Estado del arte} \mbox{} \\
-	Descripción otros simuladores parecidos como New York Sim.
+	En él se describen las soluciones que existen en la actualidad en cuanto a simuladores 5G se refiere. Se realiza una breve evaluación de los principales simuladores 5G, independientemente de su clasificación.
 
 \paragraph{Capítulo 3: Planificación y requisitos} \mbox{} \\
-	Requisitos y tareas que hay que realizar para que el proyecto resulte satisfactorio. Diagrama de Gantt.
+	Se establecen unos requisitos que se consideran imprescindibles para que, una vez dada la finalización del proyecto, este resulte satisfactorio. Además, se expone la planificación que se llevó a cabo para la realización del proyecto así como una estimación del coste que conllevaría.
 
 \paragraph{Capítulo 4: Acerca de \textit{QuaDRiGa}} \mbox{} \\
-	Descripción de Quadriga, funcionalidades, limitaciones, explicación de su paradigma, descripción de sus principales funciones, pequeñas pruebas e incluso un breve tutorial.
+	En este capitulo se lleva a cabo una descripción detallada de \textit{QuaDRiGa}, exponiendo sus funcionalidades, limitaciones, su paradigma de programación y su estructura. Finalmente, se realiza una pequeña prueba de dicho software.
 
 \paragraph{Capítulo 5: Diseño e implementación} \mbox{} \\
-Una explicación detallada de toda la funcionalidad del código del proyecto, cómo se ha logrado, cómo se utiliza...
+    Este capítulo contiene una explicación detallada de toda la funcionalidad del código del proyecto, su diseño y estructura, una descripción de sus características y funcionalidades y, por último, una guía de uso.
 
 \paragraph{Capítulo 6: Pruebas} \mbox{} \\
-Pruebas y resultados, protocolo de pruebas, consumo de CPU y memoria.
+    Se realiza una serie de pruebas al simulador para comprobar su capacidad y evaluar los resultados obtenidos así como el consumo de recursos. También se extraen observaciones y características de los entornos simulados.
 
 \paragraph{Capítulo 7: Conclusiones} \mbox{} \\
-Conclusiones, defectos y puntos fuertes de QuaDRiGa, defectos y puntos fuertes de nuestro simulador, futuros pasos.
+    Conclusiones, defectos y puntos fuertes \textit{5Gneralife}. Alcance del proyecto. Se detallan posibles mejoras y futuros pasos para el proyecto, así como sus perspectivas de futuro.
 
 %\section{Alcance del trabajo}

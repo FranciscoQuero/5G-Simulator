@@ -4,10 +4,11 @@
 
 Puesto que en el anterior capítulo se hizo especial hincapié en la importancia de los simuladores, este segundo capítulo está dedicado a exponer las principales implementaciones de simuladores orientados a 5G que existen en la actualidad, resaltando las diferencias entre ellas. Por último, se justifican las características que, como objetivo, debe reunir el simulador implementado en el actual proyecto.
 
-Antes de describir los diferentes simuladores existentes a día de hoy, es importante tener en cuenta los tipos de nivel funcional de los simuladores atendiendo a sus características:
+Antes de describir los diferentes simuladores existentes a día de hoy, es importante tener en cuenta los tipos de nivel funcional de los simuladores de comunicaciones móviles atendiendo a sus características:
 \begin{itemize}
-    \item \textbf{Simulador de nivel de enlace:} cuentan con la capacidad de calcular parámetros como la cobertura, potencia o análisis de obstáculos. Además incluyen funcionalidades -a veces limitadas- de emparejamiento terminal-estación base y/o control de errores.
-    \item \textbf{Simulador de nivel de sistema:} computan parámetros y datos específicos como control de admisión, gestión de carga o eficiencia.
+    \item \textbf{Simulador de capa física:} modela las comunicaciones básicas entre un transmisor y receptor teniendo en cuenta parámetros como la posición de los mismos, la frecuencia, el tipo de canal, la trayectoria de la onda y las pérdidas de propagación.
+    \item \textbf{Simulador de nivel de enlace:} cuenta con la capacidad de calcular parámetros como la cobertura, potencia o análisis de obstáculos. Además incluye funcionalidades -a veces limitadas- de emparejamiento terminal-estación base y/o control de errores.
+    \item \textbf{Simulador de nivel de sistema:} computa parámetros y datos específicos como control de admisión, gestión de carga o eficiencia, incluyendo en ocasiones posibilidad de estudio de uso de ciertos protocolos en la red.
 \end{itemize}
 
 A continuación, se enumeran los principales simuladores de 5G desarrollados tanto a nivel de enlace como a nivel de sistema.
@@ -36,6 +37,9 @@ Además de su peculiaridad de ser modular, el simulador GTEC cuenta con capacida
 \subsection{Introducción}
 Vienna \cite{vienna} es una \textit{suite} de simuladores escritos en \textit{Matlab} que incluye simuladores de nivel de enlace y de nivel de sistema para \acs{lte} y actualmente, solo un simulador a nivel de enlace para 5G, mientras que el simulador de nivel de sistema se encuentra en desarrollo, todos ellos implementados por investigadores de la Universidad Técnica de Viena. Se distribuye con una licencia de uso exclusivamente académico.
 \subsection{Características}
-El simulador de nivel de enlace de 5G actualmente incluye características distintivas con respecto a los demás simuladores como la elección de parámetros individualmente para cada nodo, la separación de los canales de subida y de bajada, simulación multi-portadora o diversidad de receptores. Sin embargo, no admite planificación geométrica de la red ni cuenta con un modelo de pérdidas por el trayecto.
+El simulador de nivel de enlace de 5G actualmente incluye características distintivas con respecto a los demás simuladores como la elección de parámetros individualmente para cada nodo, la separación de los canales de subida y de bajada, simulación multi-portadora o diversidad de receptores. Sin embargo, no admite planificación geométrica de la red ni cuenta con un modelo de pérdidas de propagación.
 
 \section{Conclusiones}
+Teniendo en cuenta los simuladores anteriormente descritos, se puede extraer como conclusión que es deseable que un simulador de nivel de enlace o de sistema para 5G reúna como características la posibilidad de explotar al máximo las ventajas que 5G ofrece, como pueden ser la posibilidad de simular estaciones base de distinta frecuencia, movilidad de terminales, distintos tipos de celda, planificación geométrica, emparejamiento dinámico, simulaciones a muy altas frecuencias, alta disponibilidad -esto es, contar con un nodo de respaldo al que conectarse-, modelado de distintos tipos de entorno y de canal y modelado de antenas de las estaciones base mediante \acs{mimo}.
+
+Si bien \textit{QuaDRiGa} no incluye todas estas características puesto que se concibe como un generador de canal en el que otros simuladores pueden basarse, como se explica en el Capítulo 4, se puede adelantar del mismo que las funcionalidades que debe incluir un simulador de un nivel superior a \textit{QuaDRiGa} son las de combinar escenarios con distintos tipos de celda, simulaciones multi-frecuencia, modelado de emparejamientos -incluidos los emparejamientos para terminales en movimiento- y obtención de parámetros concluyentes como cálculo de la capacidad del canal (\textit{troughput}) o del \ac{sinr}.

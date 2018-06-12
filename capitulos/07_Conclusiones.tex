@@ -1,3 +1,25 @@
 \chapter{Conclusiones y trabajos futuros}\label{cap.conclusiones}
 \section{Introducción}
-Bla bla bla
+
+En este último capítulo se va a tratar el grado de consecución de los objetivos con los que el proyecto contaba en un principio y las conclusiones que se pueden extraer a raíz de él. 
+
+Durante el trascurso del proyecto, se ha desarrollado un simulador de redes 5G funcional a partir del generado de canal \textit{QuaDRiGa}, implementado en Matlab. Se ha conseguido que este simulador sea intuitivo a la hora de ser usado gracias a su interfaz gráfica, y como resultados, ofrece unos entornos de 5G realistas y configurables. Gracias a las herramientas implementadas, se pueden obtener representaciones gráficas del entorno y de las variables de salida, tales como SINR, \textit{throughput} o potencia recibida, atendiendo a dos criterios de emparejamiento distintos y a dos tipos de celda: macro-celda y micro-celda urbanas.
+
+El desarrollo de este simulador ha sido llevado a cabo a través de programación modular y orientada a objetos, escrita completamente en inglés, lo que facilita la escalabilidad y comprensión por parte de un tercero. Puesto que la herramienta ha sido concebida para su uso académico, se ha publicado bajo una licencia GNU LGPL v3.0 y se ha creado un repositorio para la misma.
+
+El simulador, aun teniendo sus limitaciones, ha demostrado ajustarse a los estándares descritos por entidades como 3GPP, integrando su compatibilidad con el TR 38.901, un modelado de canal y de entorno para 5G en los que se engloban los escenarios de alta potencia y utilización. Por tanto, el simulador implementa los recursos necesarios como para generar escenarios a frecuencias de hasta 100 GHz, con movilidad de usuarios y evolución temporal implementadas.
+
+Sin embargo, existen características típicas de 5G que no han sido implementadas, como enlaces MIMO, modelado de celdas de naturaleza más pequeña, como pico-celdas o femto-celdas, o técnicas avanzadas como ICIC o criterios de emparejamiento más avanzados, como asignar prioridades a determinados tipos de celda.
+
+Aun tratándose de un prototipo que adopta algunas simplificaciones para facilitar su desarrollo, integra funcionalidades de modelado de canal como parámetros de gran escala y de pequeña escala que realizan unos cálculos del modelo del canal muy exactos, tanto que dependiendo de la envergadura de la simulación, su tiempo de ejecución puede durar días.
+
+En definitiva, el simulador \textit{5Gneralife} ha demostrado cumplir su función, proporcionando unas simulaciones que permiten evaluar el comportamiento de un escenario 5G de una forma fácil, a pesar de sus limitaciones y simplificaciones de implemetación, sirviendo como base para un posible proyecto mucho más ambicioso que podría deparar en un simulador completamente funcional y exhaustivo.
+
+\section{Mejoras y futuros pasos}
+Con el ánimo de que el proyecto se mantenga vivo y pueda seguir mejorándose, se ha publicado en su totalidad con la filosofía de software libre en la plataforma colaborativa GitHub, donde cualquier colaborador puede aportar sus implementaciones o descargarse el simulador para sus propias pruebas.
+
+Como simulador que integra funcionalidades de nivel de enlace y de sistema, se da pie a que a través de implementaciones que lo complementen, pueda llegar a ser un proyecto que consiga evolucionar y convertirse en un simulador completo.
+
+Como posibles tareas de mejora, se propone la implementación de un procesamiento multi-núcleo que permita acortar tiempos de ejecución. Otra característica interesante sería la del modelado de visión directa dependiendo de la distancia a la que se encuentre la estación base en cuestión. Por otro lado, una funcionalidad que resultaría en un avance considerable sería la inclusión de criterios de emparejamiento adicionales, puesto que permitiría evaluar la red desde unos criterios más realistas. También se puede hacer mención a ciertos detalles que parametrizan la red con más detalle, como puede ser la adición de pico-celdas o femto-celdas, la implementación de reuso de frecuencias para evitar interferencias, o la posibilidad de que un receptor se mueva a una velocidad determinada. 
+
+El propio departamento de radio-comunicaciones del Fraunhofer HHI ha mostrado su interés en el proyecto, puesto que está basado en \textit{QuaDRiGa}, su propio proyecto, y actualmente se encuentra evaluando el código del simulador para la propuesta de futuras mejoras y colaboraciones.
